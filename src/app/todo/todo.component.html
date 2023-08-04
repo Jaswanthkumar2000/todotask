@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo</title>
+</head>
+<body>
+<div class="center">
+  <div class="color-white">
+   <div class="color-blue ">
+    <h1 class="todo-heading">Todo Application</h1>
+   </div>
+   <div>
+    <form (submit) = "addtodo()">
+    <input type="text" placeholder="Enter Your Todo Items" name="inputvalue" [(ngModel)] = "inputvalue"/>
+  <button pButton pRipple label="Add" class="p-button-success"></button>
+  </form>
+  <div *ngFor = "let todolistname of todolist" class="tododiv">
+    <h1 class="todo-text">{{todolistname}}</h1>
+   <!--<button (click) = "removetodo(todolistname)">Remove</button>--> 
+    <button  (click) = "removetodo(todolistname)" pButton pRipple label="Delete" class="p-button-success del-btn"></button>
+    </div>
+   </div>
+  </div>
+</div>
+
+
+
+
+</body>
+</html>
